@@ -6,6 +6,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 public class TelegramBot extends TelegramLongPollingBot {
     public String messageText;
     public long chatId;
+
     @Override
     public String getBotUsername() {
         return "TestBot";

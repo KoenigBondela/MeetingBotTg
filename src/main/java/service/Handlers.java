@@ -10,7 +10,8 @@ public class Handlers extends TelegramBot {
     Map<String, Runnable> commands = new HashMap<>();
 
     public void telegramHandlers(String messageText, long chatId) {
-        commands.put("/start", () -> startCommandResponse(chatId));
+        StartBot startBot = new StartBot();
+        commands.put("/start", () -> startBot.checking(chatId));
         commands.put("/about", () -> aboutCommandResponse(chatId));
         commands.put("/authors", () -> authorsCommandResponse(chatId));
 
